@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="LOGIN"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30sp"
+
+    />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center"
+        >
+    </ImageView>
+
+    <EditText
+        android:id="@+id/email"
+        android:hint="Email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:hint="Password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Login"
+        android:background="@drawable/btn_blue"
+        android:textColor="#ffffff"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Or"
+        android:gravity="center" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Login" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find Password"
+            android:gravity="center"
+            android:layout_weight="5"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:gravity="center"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_weight="5" />
+    </LinearLayout>
+
+
+</LinearLayout>
