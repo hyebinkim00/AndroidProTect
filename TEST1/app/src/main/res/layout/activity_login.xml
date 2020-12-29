@@ -15,6 +15,7 @@
         android:text="LOGIN"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="30sp"
+        android:layout_margin="20dp"
 
     />
 
@@ -27,42 +28,135 @@
         >
     </ImageView>
 
-    <EditText
-        android:id="@+id/email"
-        android:hint="Email"
+
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+
+    >
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/TextInput_email"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="wrap_content"
+        android:hint="Email"
+
+        />
+
+</com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextInput_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PassWord"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    
+<!--    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Email" />
 
     <EditText
         android:hint="Password"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="50dp" />-->
 
-
-    <Button
+    <LinearLayout
+        android:id="@+id/Test_login"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Login"
+        android:orientation="horizontal"
+        android:gravity="center"
         android:background="@drawable/btn_blue"
-        android:textColor="#ffffff"
-        />
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"
+        android:clickable="true"
+        android:weightSum="10"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:src="@drawable/login"
+
+            ></ImageView>
+           
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Login"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+
+            />
+
+
+    </LinearLayout>
+
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:text="Or"
         android:gravity="center" />
 
-    <Button
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Login" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/btn_blue"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"
+        android:clickable="true"
+        android:weightSum="1"
+        >
 
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/login2"
+            android:layout_gravity="center"
+
+            >
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="BACK"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+
+            />
+
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="10"
+        android:layout_margin="10dp"
         >
 
         <TextView
