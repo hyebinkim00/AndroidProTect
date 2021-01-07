@@ -9,6 +9,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.list.view.*
 
 class LoanAdapter(val loanlist : ArrayList<Loans>) : RecyclerView.Adapter<LoanAdapter.CustomViewHolder>() {
 
@@ -17,11 +18,22 @@ class LoanAdapter(val loanlist : ArrayList<Loans>) : RecyclerView.Adapter<LoanAd
        val view = LayoutInflater.from(parent.context).inflate(R.layout.list,parent,false)
 
         return CustomViewHolder(view).apply {
+            star.setOnClickListener {
+                val curPos :Int = adapterPosition
+                star.setImageResource(R.drawable.star_select)
+
+
+            }
+
             itemView.setOnClickListener {
                 val curPos :Int = adapterPosition
                 val loans : Loans =loanlist.get(curPos)
+
                 Toast.makeText(parent.context,"Text: ${loans.title}",Toast.LENGTH_SHORT).show()
             }
+
+
+
 
         }
     }
@@ -35,6 +47,7 @@ class LoanAdapter(val loanlist : ArrayList<Loans>) : RecyclerView.Adapter<LoanAd
         holder.price.text =loanlist.get(position).price
         holder.won.text =loanlist.get(position).won
         holder.title.text = loanlist.get(position).title
+        holder.star.setImageResource(loanlist.get(position).star)
         holder.number.text =loanlist.get(position).number
         holder.month.text =loanlist.get(position).month
         holder.text.text =loanlist.get(position).text
@@ -53,6 +66,7 @@ class LoanAdapter(val loanlist : ArrayList<Loans>) : RecyclerView.Adapter<LoanAd
         val price =itemView.findViewById<TextView>(R.id.tv_price)
         val won = itemView.findViewById<TextView>(R.id.tv_won)
         val title = itemView.findViewById<TextView>(R.id.tv_title)
+        val star = itemView.findViewById<ImageView>(R.id.star_blank)
         val number = itemView.findViewById<TextView>(R.id.tv_number)
         val month = itemView.findViewById<TextView>(R.id.tv_month)
         val text = itemView.findViewById<TextView>(R.id.tv_text)
